@@ -13,6 +13,7 @@ const static = require("./routes/static")
 
 /* ***********************
  * View Engine and Templates
+ * Motor de Plantillas
  *************************/
 app.set("view engine", "ejs")
 app.use(expressLayouts)
@@ -25,7 +26,7 @@ app.use(static)
 
 //Index route
 app.get("/", function(req, res){
-  res.render("index", {title: "Home"})
+  res.render("index", {title: "Home | Auto Shop"})
 })
 
 /* ***********************
