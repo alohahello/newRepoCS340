@@ -4,3 +4,250 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+  color: #333;
+  background-image: url("../images/site/checkerboard.jpg");
+  max-width: 1200px;
+  /* Center the container on the page */
+  margin: 20px auto;
+  border: 10px solid #0077b6;
+  border-radius: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #0077b6;
+}
+
+/* Layout and Structure */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  /* color: #fff; */
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Typography */
+h1 {
+  font-size: 24px;
+  color: aqua;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Colors and Backgrounds */
+section {
+  /* background-color: #fff;
+  border: 1px solid #ddd; */
+  padding: 20px;
+}
+
+/* Spacing and Margins */
+button {
+  margin: 10px;
+  padding: 8px 16px;
+}
+
+/* Positioning and Display */
+.article {
+  float: left;
+  width: 70%;
+}
+
+.sidebar {
+  float: right;
+  width: 30%;
+}
+
+/* Images and Media */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* background-color: #0077b6; */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  background-color: #0077b6;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+  /* background-color: #0077b6; */
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #ffffff;
+  /* background-color: #0077b6; */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Forms */
+input[type="text"] {
+  width: 100%;
+}
+
+/* White background main, footer, header */
+header,
+main,
+nav,
+footer {
+  background-color: white;
+  margin: 0;
+  padding: 12px;
+}
+
+/* Align account link to right */
+#tools {
+  grid-column: 2;
+  text-align: right;
+}
+
+/* The parent container for the hero section */
+.hero-car-section {
+  position: relative; /* Establishes a positioning context for its children */
+  /* border: 5px solid orange; Adds an orange border around the image */
+  background-color: aqua;
+  background: url("/images/vehicles/delorean.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* The container for the Delorean car image */
+.hero-delorean-car {
+  position: absolute; /* Takes the image out of the normal flow */
+  display: flex; /* Uses flexbox for layout control */
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  left: 0; /* Aligns the left edge with the left edge of the parent */
+  right: 0; /* Aligns the right edge with the right edge of the parent */
+  top: 0; /* Aligns the top edge with the top edge of the parent */
+  bottom: 0; /* Aligns the bottom edge with the bottom edge of the parent */
+  margin: auto; /* Centers the image within the parent both horizontally and vertically */
+}
+
+/* Text content that is placed above the Delorean car image */
+.hero-car-text {
+  position: relative; /* Establishes a positioning context for text content */
+  z-index: 1; /* Places the text content above the hero-delorean-car element */
+  border-radius: 2px;
+  background-color: rgba(6, 72, 101, 0.452);
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  
+}
+
+.hero-car-text p{
+  color: rgb(255, 255, 255);
+  line-height: 10px;
+}
+
+.upgrades-and-reviews {
+  display: block;
+}
+
+.upgrades,
+.reviews {
+    width: 100%; /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+}
+
+.content {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of the columns */
+}
+
+.parts_layout {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust the gap between images as needed */
+  
+}
+
+.parts_layout img{
+  width: 50%;
+}
+
+.image {
+  text-align: center; /* Center the images horizontally */
+}
+
+.parts_images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue; /*CAMBIAR WHEN ADD CLASS TO IMAGES*/
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: lightblue;
+    
+  }
+
+  .upgrades-and-reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .parts_layout img{
+    width: 30%;
+  }
+
+  .reviews{
+    text-align: center;
+  }
+.hero-car-text{
+  
+  width: 20%;
+  padding: 10px 20px;
+
+}
+
+.hero-car-section{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 50px; */
+}
+
+
+
+
+
+
+}
