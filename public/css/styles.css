@@ -8,7 +8,6 @@
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  /* background-color: #f0f0f0; */
   color: #333;
   background-image: url("../images/site/checkerboard.jpg");
   max-width: 1200px;
@@ -21,6 +20,10 @@ body {
 a {
   text-decoration: none;
   color: #0077b6;
+}
+
+#wrapper {
+  min-height: 100%;
 }
 
 /* Layout and Structure */
@@ -42,7 +45,7 @@ header {
 /* Typography */
 h1 {
   font-size: 24px;
-  color: aqua;
+  color: rgb(32, 93, 93);
 }
 
 p {
@@ -125,6 +128,39 @@ footer {
   margin: 0;
   padding: 12px;
 }
+main{
+  /* make main box to cover whole page */
+  min-height: 100vh; 
+}
+
+footer {
+  bottom: 0;
+}
+
+/* Styles for Inventory Display */
+#inv-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+#inv-display li {
+  flex: 0 1 auto;
+  margin: 10px;
+  text-align: center;
+}
+
+#inv-display img {
+  width: 100%;
+  max-width: 150px; /* Adjust as needed */
+  height: auto;
+}
+
+.namePrice {
+  margin-top: 10px;
+}
 
 /* Align account link to right */
 #tools {
@@ -166,10 +202,9 @@ footer {
   padding: 10px;
   width: 30%;
   text-align: center;
-  
 }
 
-.hero-car-text p{
+.hero-car-text p {
   color: rgb(255, 255, 255);
   line-height: 10px;
 }
@@ -180,14 +215,14 @@ footer {
 
 .upgrades,
 .reviews {
-    width: 100%; /* Adjust the width as needed */
-    padding: 10px;
-    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional: Add a border for visual separation */
 }
 
 .content {
-    display: flex;
-    flex-direction: row-reverse; /* Reverse the order of the columns */
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of the columns */
 }
 
 .parts_layout {
@@ -195,10 +230,9 @@ footer {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px; /* Adjust the gap between images as needed */
-  
 }
 
-.parts_layout img{
+.parts_layout img {
   width: 50%;
 }
 
@@ -210,44 +244,35 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blue; /*CAMBIAR WHEN ADD CLASS TO IMAGES*/
+  background-color: rgb(168, 237, 239); /*CAMBIAR WHEN ADD CLASS TO IMAGES*/
 }
 
 @media only screen and (min-width: 600px) {
   body {
     background-color: lightblue;
-    
   }
 
-  .upgrades-and-reviews{
+  .upgrades-and-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .parts_layout img{
+  .parts_layout img {
     width: 30%;
   }
 
-  .reviews{
+  .reviews {
     text-align: center;
   }
-.hero-car-text{
-  
-  width: 20%;
-  padding: 10px 20px;
+  .hero-car-text {
+    width: 20%;
+    padding: 10px 20px;
+  }
 
-}
-
-.hero-car-section{
-  height: 600px;
-  display: flex;
-  align-items: center;
-  /* margin-bottom: 50px; */
-}
-
-
-
-
-
-
+  .hero-car-section {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 50px; */
+  }
 }
